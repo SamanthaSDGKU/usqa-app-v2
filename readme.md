@@ -1,0 +1,6 @@
+Flask==1.1.2
+spacy==3.0.5
+cyhunspell==2.0.2
+nltk==3.6.2
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0-py3-none-any.whl
+gunicorn==20.1.0

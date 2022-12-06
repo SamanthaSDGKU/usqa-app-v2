@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title> User Stories Quality Analyzer </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/bootstrap/css/main.css" rel="stylesheet">
+  <style>
+    .challenge.container {
+      width:100%;
+      padding:0;
+    }
+    .instructions{
+      font-size: 20px;
+    }
+    
+  </style>
+
+</head>
+
+<body style="background-color: #DFDFDF">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Start Menu</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://forms.gle/r36oSg2PvDyLtqQy5" target="_blank">Webpage Survey </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contact.html">Contact</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row" style="background-color:white">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5" style="color:black"><b>User Stories Quality Analyzer</b></h1>
+        <h2 style="font-size:16pt;">Try your user story and see if it has the necessary quality for the next stage to becoming the next software innovation.</h2>
+        <!-- <img style="width:65%" src="static/images/AI-Programin2.png"> -->
+         <p>  </p>
+         <p>  </p>
+
+
+        <!-- TEXT REQUEST USER STORIES -->
+        <form method="POST">
+          <label class="instructions" for="us_text">Please, enter your user story:</label><br>
+          <input class="form-control" type="text" id="us_text" name="us_text"
+          placeholder="As a <user>, I want <something> to <benefit>..."
+          size="101"
+          autofocus><br>
+           <p>  </p>
+          <input type="submit" value="Send" class="btn btn-primary">
+        </form>
+
+        <form>
+          <!-- <label for="us_respond">System response:</label><br>
+          <input type="text" id="us_respond" name="us_respond"
+          size="300"
+          readonly> -->
+          <p for="us_respond" style="font-size:20px;font-style:italic;">{{ system }}</p><br>
+          <div>
+            
+            <p style="font-weight:bold;">{{ us }}</p>
+            <p style="font-weight:normal;font-style: italic;">{{ evaluation }}</p>
+
+            {% if flag %}
+              <p style="color:green; font-style: italic;">{{ errors }}</p>
+            {% else %}
+              <p style="color:red; font-style: italic;">{{ errors }}</p>
+            {% endif %}
+          </div>
+
+        </form>
+
+
+        <p style="padding-top:30px"><a href="#" style="color:#777777">Background</a></p>
+        <p style="text-align:justify; max-width:600px; margin:auto; padding-bottom:30px;"> Scrum Methodology being one of the most popular technique for agile software development presents great working strategies to fast innovate and develop software, but one of the weak points is the construction of quality user stories they could make efficient the software delivery, to start tackling this problem we investigated the composition of the scrum methodology and the user stories and the type of user stories to start a brainstorm and find solutions of how to evaluate the quality of user story and give a fast feedback to the user so it could be correct and to be the closest to perfect user stories</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/jquery/jquery.slim.min.js"></script>
+  <script src="static/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+
+</html>
